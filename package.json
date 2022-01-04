@@ -1,0 +1,17 @@
+{
+  "name": "pp-downloader",
+  "version": "1.0.0",
+  "description": "You can download profile photos in Xenforo based forums",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "pp"
+  ],
+  "author": "Akif9748",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
