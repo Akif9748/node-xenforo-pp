@@ -1,8 +1,8 @@
 //Minimum value is 1 for first.
-
-const first = 115,
-  last = 117,
-  path = `./images/`, link = "https://www.silicone-forum.com"
+const first = 116,
+  last = 116,
+  path = `./images/`,
+  link = "https://www.silicone-forum.com"
 
 const fs = require("fs");
 const axios = require("axios");
@@ -10,7 +10,6 @@ const axios = require("axios");
 
 for (var i = first; i <= last; i++) {
   download(i)
-
 }
 
 
@@ -27,7 +26,7 @@ function download(i) {
   axios.get(url, {
     responseType: 'arraybuffer'
   })
-    .then(function (response) {
+    .then((response)=> {
       // handle success
       const buffer = Buffer.from(response.data, 'base64');
       fs.writeFileSync(`${path + i}.jpg`, buffer)
@@ -35,7 +34,7 @@ function download(i) {
 
 
     })
-    .catch(function (error) {
+    .catch((error)=>  {
       // handle error
       return console.error(`${i} is not success.`, "Cant found image.");
 
