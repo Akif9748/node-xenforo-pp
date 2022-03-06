@@ -7,10 +7,12 @@ const first = 1, last = 50, path = "./images/", link = "https://www.silicone-for
 let success = 0;
 
 async function download(i) {
+  
+  const number = i.toString();
 
   const response = await fetch(
     i >= 1000 ?
-      `${link}/data/avatars/o/${(i / 1000).toString().substring(0, number.length - 3)}/${number}.jpg`
+      `${link}/data/avatars/o/${number.substring(0, number.length - 3)}/${i}.jpg`
       : `${link}/data/avatars/o/0/${i}.jpg`
 
   );
